@@ -1,11 +1,13 @@
 import React from 'react'
-import '../App.css';
+import data from './data'
 function Sidebar() {
     return (
-        <div className="sidebar">
-             
+        <div>
+        <div>
+           <data/>
+        </div>
+            hello
         </div>
     )
 }
-export default Sidebar
-
+export default Sidebar;
