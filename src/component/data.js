@@ -1,10 +1,10 @@
 import React from 'react'
-
-function data() {
+function Data() {
     return (
         <div>
-            hello hi
+            <h2>hi</h2>
         </div>
     )
 }
-export default data;
+
+export default Data
