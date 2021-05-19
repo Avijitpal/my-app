@@ -2,11 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import './App.css';
 import reportWebVitals from './reportWebVitals';
-const element = <h1>hi this the home page</h1>
+import Data from './component/Data';
 
+function Input(){
+  return <div id="input-field">
+   <input type="text" name="inputData"/> <button onClick="Data()">Submit</button> 
+  </div>
+}
 ReactDOM.render(
-      <App/>,
+      <Input/>,
   document.getElementById('root')
 );
 
