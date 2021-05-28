@@ -4,13 +4,33 @@ import './index.css';
 import App from './App';
 import './App.css';
 import reportWebVitals from './reportWebVitals';
-import Data from './component/Data';
 
-function Input(){
-  return <div id="input-field">
-   <input type="text" name="inputData"/> <button onClick="Data()">Submit</button> 
-  </div>
+
+class Input extends React.Component {
+  constructor() {
+    super();
+    this.onSubmitForm = this.onSubmitForm.bind(this);
+  }
+
+  onSubmitForm() {
+    console.log(this.input.value);
+  }
+
+  render() {
+    return (
+      <div id="input-field">
+        <div>
+         <input type="file"  ref={myinput => (this.input = myinput)}  ID="fileSelect" accept=".xlsx, .xls, .csv"/>
+        </div>
+
+        <button onClick={this.onSubmitForm}>Submit</button>
+      </div>
+    );
+  }
 }
+
+export default Input;
+
 ReactDOM.render(
       <Input/>,
   document.getElementById('root')
